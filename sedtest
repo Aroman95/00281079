@@ -1,0 +1,20 @@
+#/bin/bash/
+
+
+#		SED Script
+
+#Inserts above the first line the title PERSONAL FILE
+
+sed '1i PERSONNEL FILE' datebook
+
+#Remove the salaries ending in 500
+
+sed '/500$/d' datebook
+
+#Print the contents of the file withe the last names and the first names reversed
+
+sed 's/^\([^ ]*\) \([^:]*\)/\2 \1/' datebook
+
+#Append at the end of the file THE END
+
+sed '$a THE END' datebook
